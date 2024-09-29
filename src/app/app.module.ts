@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesService } from './services/heroes.service';
+import { HeroeComponent } from './components/heroe/heroe.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HeroesService } from './services/heroes.service';
     HomeComponent,
     NavbarComponent,
     HeroesComponent,
-    AboutComponent
+    AboutComponent,
+    HeroeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroesService } from '../../services/heroes.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -9,11 +10,13 @@ import { HeroesService } from '../../services/heroes.service';
 export class HeroesComponent {
   heroes: any[] = []
 
-  constructor(private heroesService: HeroesService) {    
+  constructor(private heroesService: HeroesService, private router:Router) {    
     this.heroes = this.heroesService.getHeroes()
     console.log(this.heroes);
     
   }
-
+  verHeroe(id:number){      
+    this.router.navigate(['heroe', id])
+  }
 
 }
