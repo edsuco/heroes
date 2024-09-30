@@ -69,9 +69,19 @@ export class HeroesService {
         return this.heroesData
     }
 
-    getheroe(id:string){       
+    getHeroe(id:string){       
        const heroe = this.heroesData.find(e => e.id === parseInt(id))
        return heroe
+    }
+
+    buscarHeroes(value:string){
+        let heroesArr:Heroe[] = []
+
+        this.heroesData.filter(item => {
+            item.nombre.toLowerCase().includes(value.toLowerCase())? heroesArr.push(item) : []
+        })
+        console.log(heroesArr);
+        return heroesArr
     }
 }
 

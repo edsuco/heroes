@@ -18,9 +18,9 @@
             <a class="nav-link" href="#" [routerLink]="['about']">About</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Buscar héroe" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        <form class="d-flex" (keydown)="handleKeyupEnter($event)">
+          <input class="form-control me-2" type="search" placeholder="Buscar héroe" aria-label="Search" #termino (keyup.enter)="buscarHeros(termino.value)">
+          <button class="btn btn-outline-info" type="button" (click)="buscarHeros(termino.value)">Buscar</button>
         </form>
       </div>
     </div>
